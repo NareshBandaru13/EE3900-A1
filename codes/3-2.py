@@ -10,7 +10,7 @@ import shlex
 x=np.array([1.0,2.0,3.0,4.0,2.0,1.0])
 k = 20
 y = np.zeros(20)
-
+%jojo
 
 y[0] = x[0]
 y[1] = -0.5*y[0]+x[1]
