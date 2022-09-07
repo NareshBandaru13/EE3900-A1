@@ -67,6 +67,50 @@ frame=single,
 breaklines=true,
 columns=fullflexible
 }
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{txfonts}         
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{polynom}
+\usepackage{capt-of}
+\usepackage{siunitx}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\sbrak}[1]{\ensuremath{\left[#1\right]}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\var}[1]{\mathrm{Var}\left[ #1 \right]}
+\providecommand{\der}[1]{\mathrm{d} #1}
+\providecommand{\gauss}[2]{\mathcal{N}\ensuremath{\left(#1,#2\right)}}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\z}[1]{{\mathcal{Z}}\{#1\}}
+\providecommand{\ztrans}{\overset{\mathcal{Z}}{ \rightleftharpoons}}
+
+\providecommand{\parder}[2]{\frac{\partial}{\partial #2} \brak{#1}}
+
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\numberwithin{equation}{section}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand\thesection{\arabic{section}}
+
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
 
 
 
@@ -85,9 +129,10 @@ columns=fullflexible
 %\newtheorem{cor}{Corollary}
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
-\newcommand{\define}{\stackrel{\triangle}{=}}
+
 \bibliographystyle{IEEEtran}
 %\bibliographystyle{ieeetr}
+
 \providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
 \providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
 \providecommand{\mbf}{\mathbf}
@@ -112,10 +157,11 @@ columns=fullflexible
 \providecommand{\mean}[1]{E\left[ #1 \right]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 \providecommand{\ztrans}{\overset{\mathcal{Z}}{ \rightleftharpoons}}
+
+
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
 	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
-\newcommand{\solution}{\noindent \textbf{Solution: }}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \numberwithin{equation}{section}
 %\numberwithin{equation}{subsection}
@@ -124,16 +170,22 @@ columns=fullflexible
 \makeatletter
 \@addtoreset{figure}{problem}
 \makeatother
+
 \let\StandardTheFigure\thefigure
 %\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
 \renewcommand{\thefigure}{\theproblem}
+
+
 %\numberwithin{figure}{subsection}
+
 \def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
      \def\rightbox#1{\makebox[0in][r]{#1}}
      \def\centbox#1{\makebox[0in]{#1}}
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
 \vspace{3cm}
+
 \title{ 
 %\logo{
 Digital Signal Processing
@@ -143,6 +195,8 @@ Digital Signal Processing
 %\title{
 %	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
+
+
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 %\title{Matrix Analysis through Octave}
@@ -156,6 +210,7 @@ Digital Signal Processing
 % a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
 % was not built to handle multiple paragraphs
 %
+
 \author{ Bandaru Naresh Kumar$^{*}$ %<-this  stops a space
 \thanks{*The author is with the Department
 of Electrical Engineering, Indian Institute of Technology, Hyderabad
@@ -181,6 +236,9 @@ released under GNU GPL.  Free to use for anything. }% <-this % stops a space
 % you are supposed to have spaces between the names. For what it is worth,
 % this is a minor point as most people would not even notice if the said evil
 % space somehow managed to creep in.
+
+
+
 % The paper headers
 %\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
 %{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
@@ -191,21 +249,36 @@ released under GNU GPL.  Free to use for anything. }% <-this % stops a space
 % *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
 % you desire.
+
+
+
+
 % If you want to put a publisher's ID mark on the page you can do it like
 % this:
 %\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
 % Remember, if you use this you must call \IEEEpubidadjcol in the second
 % column for its text to clear the IEEEpubid mark.
+
+
+
 % make the title area
 \maketitle
+
 %\newpage
+
 \tableofcontents
+
 %\renewcommand{\thefigure}{\thesection.\theenumi}
 %\renewcommand{\thetable}{\thesection.\theenumi}
+
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
+
 %\renewcommand{\theequation}{\thesection}
+
+
 \bigskip
+
 \begin{abstract}
 This manual provides a simple introduction to digital signal processing.
 \end{abstract}
@@ -395,7 +468,7 @@ X(z) &= \sum_{n=-\infty}^{-1}0 + \sum_{n=0}^{\infty}a^{n}(1)z^{-n} \\
      &= \sum_{n=0}^{\infty} (az^{-1})^{n} \\
      &= \frac{1}{1-az^-1}
 \end{align*}
-Also the series is convergent for $|z| > |a|$
+Also the series is convergent for $|z| > |a|$\\\\
 %
 \item 
 Let
@@ -408,12 +481,26 @@ known as the {\em Discret Time Fourier Transform} (DTFT) of $x(n)$.\\
 \begin{lstlisting}
 wget https://github.com/NareshBandaru13/EE3900-A1/blob/main/codes/4-6.py
 \end{lstlisting}
+run the command
+\begin{lstlisting}
+python3 4-6.py
+\end{lstlisting}
+\begin{align}
+		H\brak{e^{\j \omega}} &= \frac{1 + e^{-2\j\omega}}{1 + \frac12 e^{-\j\omega}} \\
+		\implies \abs{H\brak{e^{\j \omega}}} &= \frac{\abs{1 + \cos2\omega - \j\sin2\omega}}{\abs{1 + \frac12 \cos\omega - \frac12 \sin\omega}} \\
+		&= \sqrt{\frac{(1 + \cos2\omega)^2 + (\sin2\omega)^2}{(1 + \frac12 \cos\omega)^2 + (\frac12 \sin\omega)^2}} \\
+		&= \sqrt{\frac{2 + 2\cos2\omega}{\frac54 + \cos\omega}} \\
+		&= \sqrt{\frac{2(2\cos^2\omega)4}{5 + 4\cos\omega} } \\
+		&= \frac{4\abs{\cos\omega}}{\sqrt{5 + 4\cos\omega}}
+	\end{align} 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{/home/naresh/signal processing/figures/dtft.png}
 \caption{$\abs{H\brak{e^{\j\omega}}}$}
 \label{fig:dtft}
 \end{figure}
+The period of the numerator is $\pi$ and the denominator is $2\pi$ taking the L.C.M of numerator and the denominator we get
+period as $2\pi$
 
 \item Express h(n) in terms of $H(e^{2w})$ .\\
 \solution 
@@ -448,166 +535,287 @@ wget https://github.com/NareshBandaru13/EE3900-A1/blob/main/codes/4-6.py
  \begin{align}
   h(n) &= \frac{1}{2\pi} \int_{-\pi}^{\pi} H(e^{\j\omega}) e^{\j\omega n}  {\omega} 
  \end{align}
- 
-\item \label{prob:impulse_resp}
-Find an expression for $h(n)$ using $H(z)$, given that 
-%in Problem \ref{eq:ztransab} and \eqref{eq:anun}, given that
-\begin{equation}
-\label{eq:impulse_resp}
-h(n) \ztrans H(z)
-\end{equation}
-and there is a one to one relationship between $h(n)$ and $H(z)$. $h(n)$ is known as the {\em impulse response} of the
-system defined by \eqref{eq:iir_filter}.
-\\
-\solution From \eqref{eq:freq_resp},
-\begin{align}
-H(z) &= \frac{1}{1 + \frac{1}{2}z^{-1}} + \frac{ z^{-2}}{1 + \frac{1}{2}z^{-1}}
-\\
-\implies h(n) &= \brak{-\frac{1}{2}}^{n}u(n) + \brak{-\frac{1}{2}}^{n-2}u(n-2)
-\end{align}
-using \eqref{eq:anun} and \eqref{eq:z_trans_shift}.
-\item Sketch $h(n)$. Is it bounded? Justify theoretically.
-\\
-\solution The following code plots Fig. \ref{fig:hn}.
-\begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/hn.py
-\end{lstlisting}
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=\columnwidth]{Assignment 1/Figs/hn}
-\caption{$h(n)$ as the inverse of $H(z)$}
-\label{fig:hn}
-\end{figure}
-%
-\item Convergent? Justify using the ratio test.
-\item The system with $h(n)$ is defined to be stable if
-\begin{equation}
-\sum_{n=-\infty}^{\infty}h(n) < \infty
-\end{equation}
-Is the system defined by \eqref{eq:iir_filter} stable for the impulse response in \eqref{eq:impulse_resp}?
-%
-\item Verify the above result using a python code.
-\item 
-Compute and sketch $h(n)$ using 
-\begin{equation}
-\label{eq:iir_filter_h}
-h(n) + \frac{1}{2}h(n-1) = \delta(n) + \delta(n-2), 
-\end{equation}
-%
-This is the definition of $h(n)$.
-\\
-\solution The following code plots Fig. \ref{fig:hndef}. Note that this is the same as Fig. 
-\ref{fig:hn}. 
-%
-\begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/hndef.py
-\end{lstlisting}
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=\columnwidth]{Assignment 1/Figs/hndef}
-\caption{$h(n)$ from the definition}
-\label{fig:hndef}
-\end{figure}
-%
-\item Compute 
-%
-\begin{equation}
-\label{eq:convolution}
-y(n) = x(n)*h(n) = \sum_{n=-\infty}^{\infty}x(k)h(n-k)
-\end{equation}
-%
-Comment. The operation in \eqref{eq:convolution} is known as
-{\em convolution}.
-%
-\\
-\solution The following code plots Fig. \ref{fig:ynconv}. Note that this is the same as 
-$y(n)$ in  Fig. 
-\ref{fig:xnyn}. 
-%
-\begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/ynconv.py
-\end{lstlisting}
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=\columnwidth]{Assignment 1/Figs/ynconv}
-\caption{$y(n)$ from the definition of convolution}
-\label{fig:ynconv}
-\end{figure}
-\item Express the above convolution using a Teoplitz matrix.
-\item Show that
-\begin{equation}
-y(n) =  \sum_{n=-\infty}^{\infty}x(n-k)h(k)
-\end{equation}
 \end{enumerate}
 %
-\section{DFT and FFT}
-\begin{enumerate}[label=\thesection.\arabic*]
-\item
-Compute
-\begin{equation}
-X(k) \define \sum _{n=0}^{N-1}x(n) e^{-\j2\pi kn/N}, \quad k = 0,1,\dots, N-1
-\end{equation}
-and $H(k)$ using $h(n)$.
-\item Compute 
-\begin{equation}
-Y(k) = X(k)H(k)
-\end{equation}
-\item Compute
-\begin{equation}
- y\brak{n}={\frac {1}{N}}\sum _{k=0}^{N-1}Y\brak{k}\cdot e^{\j 2\pi kn/N},\quad n = 0,1,\dots, N-1
-\end{equation}
-\\
-\solution The following code plots Fig. \ref{fig:ynconv}. Note that this is the same as 
-$y(n)$ in  Fig. 
-\ref{fig:xnyn}. 
-%
-\begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/yndft.py
-\end{lstlisting}
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=\columnwidth]{./figs/yndft}
-\caption{$y(n)$ from the DFT}
-\label{fig:yndft}
-\end{figure}
-\item Repeat the previous exercise by computing $X(k), H(k)$ and $y(n)$ through FFT and 
-IFFT.
-\item Wherever possible, express all the above equations as matrix equations.
-\item Verify the above equations by generating the DFT matrix in python.
-\end{enumerate}
-\section{Exercises}
-Answer the following questions by looking at the python code in Problem \ref{prob:output}.
-\begin{enumerate}[label=\thesection.\arabic*]
-\item
-The command
-\begin{lstlisting}
-	output_signal = signal.lfilter(b, a, input_signal)
-	\end{lstlisting}
-in Problem \ref{prob:output} is executed through the following difference equation
-\begin{equation}
-\label{eq:iir_filter_gen}
- \sum _{m=0}^{M}a\brak{m}y\brak{n-m}=\sum _{k=0}^{N}b\brak{k}x\brak{n-k}
-\end{equation}
-%
-where the input signal is $x(n)$ and the output signal is $y(n)$ with initial values all 0. Replace
-\textbf{signal.filtfilt} with your own routine and verify.
-%
-\item Repeat all the exercises in the previous sections for the above $a$ and $b$.
-\item What is the sampling frequency of the input signal?
-\\
-\solution
-Sampling frequency(fs)=44.1kHZ.
-\item
-What is type, order and  cutoff-frequency of the above butterworth filter
-\\
-\solution
-The given butterworth filter is low pass with order=2 and cutoff-frequency=4kHz.
-%
-\item
-Modifying the code with different input parameters and to get the best possible output.
-%
-\end{enumerate}
-\end{document}
-\end{enumerate}
 
+\section{Impulse Response}
+\begin{enumerate}[label=\thesection.\arabic*]
+
+\item Using long division, 
+find
+  \begin{align}
+   h(n), \quad n < 5
+  \end{align}
+  for H(z) in 
+  \eqref{eq:freq_resp}.\\
+\solution 
+ \begin{equation}
+  H(z) = \frac{1 + z^{-2}}{1 + \frac12 z^{-1}}
+ \end{equation}
+ Substitute $z^{-1} = x$
+ \polylongdiv{1+x^2}{1+\frac12 x}
+ 
+ \begin{align}
+  &\implies 1 + z^{-2} = \brak{1 + \frac12 z^{-1}}\brak{-4 + 2z^{-1}} + 5 \\
+  &\implies H(z) = -4 + 2z^{-1} + \frac{5}{1 + \frac12 z^{-1}}
+ \end{align}
+ 
+ On applying the inverse $Z$-transform on both sides of the equation
+ \begin{align}
+  H(z) &\ztrans h(n) \\
+  -4 &\ztrans -4\delta(n) \\
+  2z^{-1} &\ztrans 2\delta(n - 1) \\
+  \frac{5}{1 + \frac12 z^{-1}} &\ztrans 5\brak{-\frac12}^n u(n) \\
+ \end{align}
+ 
+ Therefore,
+ \begin{equation}
+  h(n) = -4\delta(n) + 2\delta(n - 1) + 5\brak{-\frac12}^n u(n)
+ \end{equation}
+
+\item Find an expression for $h(n)$ using $H(z)$, given that 
+           %in Problem \ref{eq:ztransab} and \eqref{eq:anun}, given that
+      \begin{equation}
+        \label{eq:impulse_resp}
+        h(n) \ztrans H(z)
+      \end{equation}
+      and there is a one to one relationship between $h(n)$ and $H(z)$. $h(n)$ is known as the {\em impulse response} of the system defined by $\eqref{eq:iir_filter}$.\\ 
+    \solution The $H\brak{z}$ can be written as,
+      \begin{align}
+         H\brak{z} &= \frac{1}{1 + \frac{z^{-1}}{2}} + \frac{z^{-2}}{1+\frac{z^{-1}}{2}}
+      \end{align}
+      From $\eqref{eq:anun}$ we can write it as,
+      \begin{align}
+        h\brak{n} &= \brak{\frac{-1}{2}}^{n} u\brak{n} + \brak{\frac{-1}{2}}^{n-2} u\brak{n-2}\label{eq:hn}
+      \end{align}
+      
+    
+\item Sketch $h(n)$. Is it bounded? Justify Theoritically.\\
+    \solution  Download the code for the plot $\ref{hn}$ from the below link,
+     \begin{lstlisting}
+wget https://github.com/NareshBandaru13/EE3900-A1/blob/main/codes/5-3.py
+     \end{lstlisting}
+     \begin{figure}[ht!]
+      \centering
+      \includegraphics[width = \columnwidth]{/home/naresh/signal processing/figures/hn.png}
+      \caption{$h\brak{n}$ as inverse of $H\brak{n}$}     
+      \label{hn}
+     \end{figure}
+     From the plot it seems like $h(n)$ is bounded and becomes smaller in magnitude as $n$ increases.\\
+    Using $\eqref{eq:hn}$, we can get theoritical expression as, 
+     \begin{align}
+       h\brak{n} &= \begin{cases}
+                        0 &, n < 0\\
+                        \brak{\frac{-1}{2}}^n &, 0\leq n<2\\
+                        5\brak{\frac{-1}{2}}^n &, n \geq 2
+                     \end{cases}\label{eq:hn_theo}
+     \end{align}
+    A sequence $\cbrak{x_n}$ is said to be bounded if and only if there exist a positive real number $M$ such that,
+         \begin{align}
+           \abs{x_n} \leq M , \forall n \in \mathcal{N}\label{def:bounded}
+         \end{align}      
+    So to say $h\brak{n}$ is bounded we should able to find the $M$ which satisfies $\eqref{def:bounded}$.\\
+    For $n < 0$, 
+       \begin{align}
+    \abs{h\brak{n}} \leq 0 
+       \end{align}
+    For $0 \leq n <2$,
+       \begin{align}
+        \abs{h\brak{n}} &= \abs{\frac{-1}{2}}^{n}\\
+                        &= \brak{\frac{1}{2}}^{n} \leq 1
+       \end{align}
+    And for $n \geq 2$,
+       \begin{align}
+        \abs{h\brak{n}} &= \abs{5\brak{\frac{-1}{2}}}^{n}\\
+                        &= \brak{\frac{5}{2}}^{n} \leq \frac{5}{4}
+       \end{align}
+    From above three cases, we can get $M$ as,
+      \begin{align}
+        M &= max\cbrak{0,1,\frac{5}{4}} \\
+          &= \frac{5}{4}
+      \end{align}
+    Therefore, $h\brak{n}$ is bounded using $\eqref{def:bounded}$ with $M = \frac{5}{4}$ i.e.,
+    \begin{align} 
+      \abs{h(n)} \leq \frac{5}{4}  \forall n \in \mathcal{N}
+    \end{align}    
+    
+     
+\item Convergent? Justify using the ratio test.\\
+     \solution We can say a given real sequence $\cbrak{x_n}$ is convergent if 
+       \begin{align}
+         \lim_{n \rightarrow \infty}\abs{\frac{x_{n+1}}{x_n}} < 1
+       \end{align}
+        This is known as Ratio test.\\
+      In this case the limit will become,
+       \begin{align}
+         \lim_{n \rightarrow \infty}\abs{\frac{h\brak{n+1}}{h\brak{n}}} &= \lim_{n \rightarrow \infty}\abs{\frac{5\brak{\frac{-1}{2}}^{n+1}}{5\brak{\frac{-1}{2}}^{n}}} \\
+          &= \lim_{n \rightarrow \infty}\abs{\frac{-1}{2}}\\
+          &= \frac{1}{2}
+       \end{align}
+      As $\frac{1}{2} < 1$, from root test we can say that $h\brak{n}$ is convergent.
+      
+\item The system with $h(n)$ is defined to be stable if
+     \begin{equation}
+      \sum_{n=-\infty}^{\infty}h(n) < \infty
+     \end{equation}
+        Is the system defined by $\eqref{eq:iir_filter}$ stable for the impulse response in $\eqref{eq:impulse_resp}$?\\
+        
+\solution From $\eqref{eq:hn}$,
+      \begin{align}
+        \sum_{n=-\infty}^{\infty}h\brak{n} &= \sum_{n=-\infty}^{\infty}\brak{\brak{\frac{-1}{2}}^{n} u\brak{n} + \brak{\frac{-1}{2}}^{n-2} u\brak{n-2}}\\
+                                           &= 2\brak{\frac{1}{1+\frac{1}{2}}}\\
+                                           &= \frac{4}{3}
+      \end{align}
+       $\therefore$ the system is stable. 
+        
+\item Verify the above result using a python code.\\
+\solution Download the python code from the below link 
+    \begin{lstlisting}
+  wget https://github.com/NareshBandaru13/EE3900-A1/blob/main/codes/5-6.py
+    \end{lstlisting}
+  Then run the following command,
+    \begin{lstlisting}
+  python3 5-6.py
+    \end{lstlisting} 
+   
+   
+   
+\item Compute and sketch $h(n)$ using 
+     \begin{equation}
+      \label{eq:iir_filter_h}
+      h(n) + \frac{1}{2}h(n-1) = \delta(n) + \delta(n-2), 
+     \end{equation}
+        This is the definition of $h(n)$.\\
+    \solution Download the code for the plot \ref{hndef} from the below link,
+     \begin{lstlisting}
+wget https://github.com/NareshBandaru13/EE3900-A1/blob/main/codes/5-7.py
+     \end{lstlisting}
+     Note that this is same as $\ref{hn}$.\\
+     \begin{figure}[ht!]
+      \centering
+      \includegraphics[width = \columnwidth]{/home/naresh/signal processing/figures/hndef.png}
+      \caption{From the definition of $h(n)$}
+      \label{hndef}
+     \end{figure}
+    For $n <0$, $h\brak{n} = 0$ and,
+     \begin{align} 
+       h\brak{0} &= \delta\brak{0}\\
+                 &= 1
+     \end{align}
+    For $n =1$,
+     \begin{align} 
+       h\brak{1} + \frac{1}{2}h\brak{0} &= \delta\brak{1} + \delta\brak{-1}\\
+      \implies  h\brak{1}&= -\frac{1}{2}h\brak{0}\\
+                         &= -\frac{1}{2}
+     \end{align}
+    $n=2$,
+      \begin{align}
+        h\brak{2} + \frac{1}{2}h\brak{1} &= 0 + \delta\brak{0}\\
+              h\brak{2} &= 1 + \frac{1}{4}\\
+                        &= \frac{5}{4}
+      \end{align}
+    And for $n>2$ RHS will be $0$ so,
+      \begin{align}
+        h\brak{n} &= -\frac{1}{2}h\brak{n-1}
+      \end{align}
+    Overall 
+      \begin{align}
+         h\brak{n} &= \begin{cases}
+                          0  &, n <0 \\
+                          1  &, n = 0 \\
+                        -\frac{1}{2} &, n=1 \\
+                        \frac{5}{4} &, n =2\\
+                        -\frac{1}{2}h\brak{n-1} &, n >2
+         \end{cases}
+         \end{align}
+        \item Compute 
+     %
+     \begin{equation}
+     \label{eq:convolution}
+     y(n) = x(n)*h(n) = \sum_{k=-\infty}^{\infty}x(k)h(n-k)
+     \end{equation}
+     %
+     Comment. The operation in $\eqref{eq:convolution}$ is known as
+     {\em convolution}.\\
+     %
+     \solution Download the code for plot $\ref{ynconv}$ from the below link
+      \begin{lstlisting}
+wget https://github.com/NareshBandaru13/EE3900-A1/blob/main/codes/5-8.py
+      \end{lstlisting}
+      \begin{figure}[ht!]
+        \centering
+        \includegraphics[width = \columnwidth]{/home/naresh/signal processing/figures/ynconv.png}
+        \caption{$y(n)$ using the convolution definition}
+        \label{ynconv}
+      \end{figure}
+    \item Express the above convolution using a Toeplitz matrix.\\
+    \solution Download the python code from the below link for the plot $\ref{ynconv_toep}$,
+     \begin{lstlisting}
+wget https://github.com/NareshBandaru13/EE3900-A1/blob/main/codes/5-9.py
+     \end{lstlisting}
+    Then run the following command,
+     \begin{lstlisting}
+python3 5-9.py
+     \end{lstlisting}
+    From $\eqref{eq:convolution}$,we express $y\brak{n}$ as
+     \begin{align}
+       y\brak{n} &= \sum_{k = -\infty}^{\infty}x\brak{k}h\brak{n-k}
+     \end{align}
+    To understand how we can use a Toeplitz matrix, we will see what we are doing in $\eqref{eq:convolution}$ 
+     \begin{align}
+      y\brak{0} &= x\brak{0}h\brak{0}\\
+      y\brak{1} &= x\brak{0}h\brak{1} + x\brak{1}h\brak{0}\\
+      y\brak{2} &= x\brak{0}h\brak{2} + x\brak{1}h\brak{1} + x\brak{2}h\brak{0}\\
+      . \nonumber&\\ 
+      .& \nonumber
+     \end{align}
+    The same thing can be written as,
+     \begin{align}
+       y\brak{0} &= \myvec{h\brak{0} & 0 & 0 &.\,&.\,&.0}\myvec{x\brak{0}\\x\brak{1}\\x\brak{2}\\ . \\.\\x\brak{5}}\\
+       y\brak{1} &= \myvec{h\brak{1} & h\brak{0} & 0 & 0 &.\,&.\,&.0}\myvec{x\brak{0}\\x\brak{1}\\x\brak{2}\\ . \\.\\x\brak{5}}\\
+       y\brak{2} &= \myvec{h\brak{2} & h\brak{1} & h\brak{0} & 0& .\,&.0}\myvec{x\brak{0}\\x\brak{1}\\x\brak{2}\\ . \\.\\x\brak{5}}\\
+       . & \nonumber \\
+       .& \nonumber
+     \end{align}
+    Using Toeplitz matrix of $h\brak{n}$ we can simplify it as,
+     \begin{align}
+       y\brak{n} &= \myvec{h\brak{0} & 0 & 0 &.\,&.\,&.\,0 \\
+                           h\brak{1} & h\brak{0} & 0 & .\,&.\,&.\,0 \\
+                           h\brak{2} & h\brak{1} & h\brak{0} & .\,&.\,&.\,0 \\
+                            &&..\\&&..\\ 0 & 0 &  0 &.\,&.\,&.\, h\brak{m-1}}\myvec{x\brak{0}\\x\brak{1}\\x\brak{2}\\ . \\.\\x\brak{5}}\label{eq:ynconv_toep}
+     \end{align}
+     Now from $\eqref{def:xn}$ we will take n 
+      \begin{align}
+          x\brak{n} &= \myvec{1\\2\\3\\4\\2\\1}
+      \end{align}
+      And from $\eqref{eq:hn_theo}$
+      \begin{align} 
+        h\brak{n} &= \myvec{1 \\ -0.5 \\ 1.25 \\. \\ . }
+      \end{align}
+     Now using $\eqref{eq:ynconv_toep}$,
+      \begin{align}
+        y\brak{n} &= x\brak{n}*h\brak{n}\\
+                  &= \myvec{1 & 0 & 0 &.\,&.\,&.\,0 \\
+                  -0.5 & 1 & 0 & .\,&.\,&.\,0 \\
+                  1.25 & -0.5 & 1 & .\,&.\,&.\,0 \\
+                   &&..\\&&..\\ 0 & 0 &  0 &.\,&.\,&.\, }\myvec{x\brak{0}\\x\brak{1}\\x\brak{2}\\ . \\.\\x\brak{5}} \\
+                  &= \myvec{1\\1.5\\3.25\\.\\.\\.}
+      \end{align}
+      \begin{figure}
+        \centering
+        \includegraphics[width = \columnwidth]{/home/naresh/signal processing/figures/ynconv_toeplitz.png}
+        \caption{Convolution of $x\brak{n}$ and $h\brak{n}$ using toeplitz matrix}
+        \label{ynconv_toep}
+       \end{figure}
+    \item Show that
+     \begin{equation}
+      y(n) =  \sum_{k=-\infty}^{\infty}x(n-k)h(k)
+      \end{equation}
+    \solution Substitute $k := n-k$ in $\eqref{eq:convolution}$, we will get 
+     \begin{align}
+       y(n) &= \sum_{k=-\infty}^{\infty}x(k)h(n-k)\\
+            &= \sum_{n - k=-\infty}^{\infty}x(n-k)h(k)\\
+            &= \sum_{k = -\infty}^{\infty}x(n-k)h(k)\\
+     \end{align}
+\end{enumerate}
 \end{document}
