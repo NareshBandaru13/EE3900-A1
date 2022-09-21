@@ -548,30 +548,52 @@ find
   \end{align}
   for H(z) in 
   \eqref{eq:freq_resp}.\\
-\solution 
- \begin{equation}
-  H(z) = \frac{1 + z^{-2}}{1 + \frac12 z^{-1}}
- \end{equation}
- Substitute $z^{-1} = x$
- \polylongdiv{1+x^2}{1+\frac12 x}
- 
- \begin{align}
-  &\implies 1 + z^{-2} = \brak{1 + \frac12 z^{-1}}\brak{-4 + 2z^{-1}} + 5 \\
-  &\implies H(z) = -4 + 2z^{-1} + \frac{5}{1 + \frac12 z^{-1}}
- \end{align}
- 
- On applying the inverse $Z$-transform on both sides of the equation
- \begin{align}
-  H(z) &\ztrans h(n) \\
-  -4 &\ztrans -4\delta(n) \\
-  2z^{-1} &\ztrans 2\delta(n - 1) \\
-  \frac{5}{1 + \frac12 z^{-1}} &\ztrans 5\brak{-\frac12}^n u(n) \\
- \end{align}
- 
- Therefore,
- \begin{equation}
-  h(n) = -4\delta(n) + 2\delta(n - 1) + 5\brak{-\frac12}^n u(n)
- \end{equation}
+\solution From $\eqref{eq:freq_resp}$, we can write
+	  \begin{align}
+		H\brak{z} &= \frac{1 + z^{-2}}{1 + \frac{z^{-1}}{2}}
+	  \end{align}
+    $$
+\begin{array}{llllll}
+& 2z^{-1} & -4 \\\cline{2-5}
+1 + z^{-1}/2 | & 1& +z^{-2}  \\
+& 2z^{-1} & +z^{-2}  \\\cline{2-5}
+& & 1 & -2z^{-1} \\
+& & -4 & -2z^{-1} & \\\cline{3-5}
+& & & 5 \\
+\end{array}
+$$
+So we can replace $\eqref{eq:freq_resp}$ as, 
+   \begin{align}
+     \frac{1+z^{-2}}{1 + \frac{z^{-1}}{2}} &= 2z^{-1} - 4 + \frac{5}{1 + z^{-1}/2}\label{eq:longdiv}
+   \end{align}
+   Now we can expand the second term of above expression as an infinite geometric series,
+   \begin{align}
+     \frac{5}{1+z^{-1}/2} &= 5\brak{1 + \brak{\frac{-1}{2z}} + \brak{\frac{-1}{2z}}^2 + .\,.\,.} 
+    \end{align}
+     where we assume $\abs{\frac{1}{2z}} < 1$.
+    So $\eqref{eq:longdiv}$ will become,
+    \begin{align}
+      &= 2z^{-1} - 4 + 5 + \frac{-5}{2}z^{-1} + \frac{5}{4}z^{-2} + \frac{-5}{8}z^{-3} + \frac{5}{16}z^{-4} + \,.\,.\\
+      &= 1z^{0} + \frac{-1}{2}z^{-1} +\frac{5}{4}z^{-2} + \frac{-5}{8}z^{-3} +\frac{5}{16}z^{-4} + \,.\,.  \label{eq:longdiv_exp}
+    \end{align}
+   Now to get $h(n)$ for $n <5$ we will compare (5.6) with the below equation,
+    \begin{align}
+      H\brak{z} &= \sum_{n = -\infty}^{n = \infty}h(n)z^{-n}
+    \end{align}
+    $h(n)$ will be the coefficient of $z^{-n}$.\\
+     Using this, from $\eqref{eq:longdiv_exp}$ we can write,
+     \begin{align}
+      h(0) &= 1\\
+      h(1) &= \frac{-1}{2}\\
+      h(2) &= \frac{5}{4}\\
+      h(3) &= \frac{-5}{8}\\
+      h(4) &= \frac{5}{16}
+     \end{align}
+     And for $n<0\,\, h(n) = 0$.\\
+     For $n>5$, we can get h\brak{n} from the geometric series,
+      \begin{align}
+        h\brak{n} &= 5\brak{\frac{-1}{2}}^n
+      \end{align}
 
 \item Find an expression for $h(n)$ using $H(z)$, given that 
            %in Problem \ref{eq:ztransab} and \eqref{eq:anun}, given that
@@ -818,4 +840,96 @@ python3 5-9.py
             &= \sum_{k = -\infty}^{\infty}x(n-k)h(k)\\
      \end{align}
 \end{enumerate}
+
+\section{DFT}
+\begin{enumerate}[label=\thesection.\arabic*]
+\item
+Compute
+\begin{equation}
+X(k) \define \sum _{n=0}^{N-1}x(n) e^{-\j2\pi kn/N}, \quad k = 0,1,\dots, N-1
+\end{equation}
+and $H(k)$ using $h(n)$.\\
+\solution Download the below python code for the plot $\ref{DFT}$,
+\begin{lstlisting}
+wget  https://github.com/Charanyash/EE3900-Digital_Signal_Processing/blob/master/Sound%201/Codes/dft.py
+\end{lstlisting}
+
+And run the following command in the terminal,
+\begin{lstlisting}
+python3 dft.py
+\end{lstlisting}
+\begin{figure}[!h]
+  \includegraphics[width = \columnwidth]{Figs/dft.png}
+  \centering
+  \caption{Plot of real part of Discrete Fourier Transforms of $x(n)$ and $h(n)$}
+  \label{DFT}
+\end{figure}
+  \item Compute 
+\begin{equation}
+Y(k) = X(k)H(k)
+\end{equation}
+ \solution Download the below python code for the plot $\ref{Y_k}$,
+  \begin{lstlisting}
+wget  https://github.com/Charanyash/EE3900-Digital_Signal_Processing/blob/master/Sound%201/Codes/Y_K.py
+  \end{lstlisting}
+Then run the following command in the terminal,
+ \begin{lstlisting}
+python3 Y_K.py
+ \end{lstlisting}
+ \begin{figure}[!h]
+  \centering
+  \includegraphics[width=\columnwidth]{Figs/Y_k.png}
+  \caption{$Y(k)$ as the product of $X(k)$ and $H(k)$}
+  \label{Y_k} 
+ \end{figure}
+\item Compute
+\begin{equation}
+ y\brak{n}={\frac {1}{N}}\sum _{k=0}^{N-1}Y\brak{k}\cdot e^{\j 2\pi kn/N},\quad n = 0,1,\dots, N-1
+\end{equation}
+\solution Download the below python code for the plot $\ref{yndft_dif}$,
+\begin{lstlisting}
+wget https://github.com/Charanyash/EE3900-Digital_Signal_Processing/blob/master/Sound%201/Codes/yndft_dif.py
+\end{lstlisting}
+Then run the following command,
+ \begin{lstlisting}
+python3 yndft_dif.py
+ \end{lstlisting}
+
+ \begin{figure}[!h]
+  \centering
+  \includegraphics[width=\columnwidth]{Figs/yndft_dif.png}
+  \caption{$y(n)$ using IDFT and difference equation}
+  \label{yndft_dif}
+ \end{figure}
+
+\item Repeat the previous exercise by computing $X(k), H(k)$ and $y(n)$ through FFT and 
+IFFT.\\
+ \solution Download the below python code for the plot $\ref{yn_ifft}$,
+  \begin{lstlisting}
+wget https://github.com/Charanyash/EE3900-Digital_Signal_Processing/blob/master/Sound%201/Codes/yn_ifft.py
+  \end{lstlisting}
+  Then run the following command,
+   \begin{lstlisting}
+python3 yn_ifft.py
+   \end{lstlisting}
+
+   \begin{figure}[!ht]
+     \includegraphics[width=\columnwidth]{Figs/yn_ifft.png}
+     \centering
+     \caption{The plot of $y\brak{n}$ using IFFT}
+     \label{yn_ifft}
+   \end{figure}
+%\item Wherever possible, express all the above equations as matrix equations.\\ 
+ % \solution We rewrite the definition of DFT,
+  %  \begin{equation}
+   %   X(k) \define \sum _{n=0}^{N-1}x(n) e^{-\j2\pi kn/N}, \quad k = 0,1,\dots, N-1
+    %\end{equation}
+    %To write the above equation in matrix equatons we will define something known as twiddle factor.
+	 
+
+ % To convert the above equation in matrix equation, we will define a new term 
+%\item Verify the above equations by generating the DFT matrix using python.
+%\item Write the C program to compute the 8-point FFT.
+\end{enumerate}
+%
 \end{document}
