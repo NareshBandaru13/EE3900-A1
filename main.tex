@@ -851,15 +851,15 @@ X(k) \define \sum _{n=0}^{N-1}x(n) e^{-\j2\pi kn/N}, \quad k = 0,1,\dots, N-1
 and $H(k)$ using $h(n)$.\\
 \solution Download the below python code for the plot $\ref{DFT}$,
 \begin{lstlisting}
-wget  https://github.com/Charanyash/EE3900-Digital_Signal_Processing/blob/master/Sound%201/Codes/dft.py
+wget  https://github.com/NareshBandaru13/EE3900-A1/blob/main/codes/6-1.py
 \end{lstlisting}
 
 And run the following command in the terminal,
 \begin{lstlisting}
-python3 dft.py
+python3 6-1.py
 \end{lstlisting}
 \begin{figure}[!h]
-  \includegraphics[width = \columnwidth]{Figs/dft.png}
+  \includegraphics[width = \columnwidth]{figures/yndft.png}
   \centering
   \caption{Plot of real part of Discrete Fourier Transforms of $x(n)$ and $h(n)$}
   \label{DFT}
@@ -870,15 +870,15 @@ Y(k) = X(k)H(k)
 \end{equation}
  \solution Download the below python code for the plot $\ref{Y_k}$,
   \begin{lstlisting}
-wget  https://github.com/Charanyash/EE3900-Digital_Signal_Processing/blob/master/Sound%201/Codes/Y_K.py
+wget  https://github.com/NareshBandaru13/EE3900-A1/blob/main/codes/6-2.py
   \end{lstlisting}
 Then run the following command in the terminal,
  \begin{lstlisting}
-python3 Y_K.py
+python3 6-2.py
  \end{lstlisting}
  \begin{figure}[!h]
   \centering
-  \includegraphics[width=\columnwidth]{Figs/Y_k.png}
+  \includegraphics[width=\columnwidth]{figures/Y_k.png}
   \caption{$Y(k)$ as the product of $X(k)$ and $H(k)$}
   \label{Y_k} 
  \end{figure}
@@ -888,16 +888,16 @@ python3 Y_K.py
 \end{equation}
 \solution Download the below python code for the plot $\ref{yndft_dif}$,
 \begin{lstlisting}
-wget https://github.com/Charanyash/EE3900-Digital_Signal_Processing/blob/master/Sound%201/Codes/yndft_dif.py
+wget https://github.com/NareshBandaru13/EE3900-A1/blob/main/codes/6-3.py
 \end{lstlisting}
 Then run the following command,
  \begin{lstlisting}
-python3 yndft_dif.py
+python3 6-3.py
  \end{lstlisting}
 
  \begin{figure}[!h]
   \centering
-  \includegraphics[width=\columnwidth]{Figs/yndft_dif.png}
+  \includegraphics[width=\columnwidth]{figures/yndft_dif.png}
   \caption{$y(n)$ using IDFT and difference equation}
   \label{yndft_dif}
  \end{figure}
@@ -906,30 +906,19 @@ python3 yndft_dif.py
 IFFT.\\
  \solution Download the below python code for the plot $\ref{yn_ifft}$,
   \begin{lstlisting}
-wget https://github.com/Charanyash/EE3900-Digital_Signal_Processing/blob/master/Sound%201/Codes/yn_ifft.py
+wget https://github.com/NareshBandaru13/EE3900-A1/blob/main/codes/6-4.py
   \end{lstlisting}
   Then run the following command,
    \begin{lstlisting}
-python3 yn_ifft.py
+python3 6-4.py
    \end{lstlisting}
 
    \begin{figure}[!ht]
-     \includegraphics[width=\columnwidth]{Figs/yn_ifft.png}
+     \includegraphics[width=\columnwidth]{figures/yn_ifft.png}
      \centering
      \caption{The plot of $y\brak{n}$ using IFFT}
      \label{yn_ifft}
    \end{figure}
-%\item Wherever possible, express all the above equations as matrix equations.\\ 
- % \solution We rewrite the definition of DFT,
-  %  \begin{equation}
-   %   X(k) \define \sum _{n=0}^{N-1}x(n) e^{-\j2\pi kn/N}, \quad k = 0,1,\dots, N-1
-    %\end{equation}
-    %To write the above equation in matrix equatons we will define something known as twiddle factor.
-	 
-
- % To convert the above equation in matrix equation, we will define a new term 
-%\item Verify the above equations by generating the DFT matrix using python.
-%\item Write the C program to compute the 8-point FFT.
 \end{enumerate}
 %
 \end{document}

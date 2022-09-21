@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.7.11)  21 SEP 2022 22:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.7.11)  21 SEP 2022 23:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1181,7 +1181,7 @@ Underfull \hbox (badness 6927) in paragraph at lines 333--336
 
 
 ]
-</home/naresh/signal processing/figures/xnyn.png, id=90, 462.528pt x 346.896pt>
+</home/naresh/signal processing/figures/xnyn.png, id=95, 462.528pt x 346.896pt>
 
 File: /home/naresh/signal processing/figures/xnyn.png Graphic file (type png)
 <use /home/naresh/signal processing/figures/xnyn.png>
@@ -1260,7 +1260,7 @@ LaTeX Warning: Command \j invalid in math mode on input line 495.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-</home/naresh/signal processing/figures/dtft.png, id=133, 462.528pt x 346.896pt
+</home/naresh/signal processing/figures/dtft.png, id=138, 462.528pt x 346.896pt
 >
 File: /home/naresh/signal processing/figures/dtft.png Graphic file (type png)
 <use /home/naresh/signal processing/figures/dtft.png>
@@ -1362,7 +1362,7 @@ Overfull \hbox (31.19911pt too wide) detected at line 578
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-</home/naresh/signal processing/figures/hn.png, id=219, 462.528pt x 346.896pt>
+</home/naresh/signal processing/figures/hn.png, id=224, 462.528pt x 346.896pt>
 File: /home/naresh/signal processing/figures/hn.png Graphic file (type png)
 <use /home/naresh/signal processing/figures/hn.png>
 Package pdftex.def Info: /home/naresh/signal processing/figures/hn.png  used on
@@ -1385,14 +1385,14 @@ Overfull \hbox (12.29274pt too wide) detected at line 690
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5 </home/naresh/signal processing/figures/hn.png>]
-</home/naresh/signal processing/figures/hndef.png, id=271, 462.528pt x 346.896p
+</home/naresh/signal processing/figures/hndef.png, id=277, 462.528pt x 346.896p
 t>
 File: /home/naresh/signal processing/figures/hndef.png Graphic file (type png)
 <use /home/naresh/signal processing/figures/hndef.png>
 Package pdftex.def Info: /home/naresh/signal processing/figures/hndef.png  used
  on input line 718.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-</home/naresh/signal processing/figures/ynconv.png, id=277, 462.528pt x 346.896
+</home/naresh/signal processing/figures/ynconv.png, id=283, 462.528pt x 346.896
 pt>
 File: /home/naresh/signal processing/figures/ynconv.png Graphic file (type png)
 
@@ -1415,7 +1415,7 @@ LaTeX Warning: Reference `def:xn' on page 7 undefined on input line 809.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 </home/naresh/signal processing/figures/ynconv.png>]
-</home/naresh/signal processing/figures/ynconv_toeplitz.png, id=351, 462.528pt 
+</home/naresh/signal processing/figures/ynconv_toeplitz.png, id=356, 462.528pt 
 x 346.896pt>
 File: /home/naresh/signal processing/figures/ynconv_toeplitz.png Graphic file (
 type png)
@@ -1430,123 +1430,51 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Warning: Command \j invalid in math mode on input line 849.
 
-
-LaTeX Warning: Reference `DFT' on page 8 undefined on input line 852.
-
-
-LaTeX Warning: File `Figs/dft.png' not found on input line 862.
-
-
-! Package pdftex.def Error: File `Figs/dft.png' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.862 ...phics[width = \columnwidth]{Figs/dft.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 
-862.
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
-File: ot1txtt.fd 2000/12/15 v3.1
-)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `Y_k' on page 8 undefined on input line 871.
-
-
-LaTeX Warning: File `Figs/Y_k.png' not found on input line 881.
-
-
-! Package pdftex.def Error: File `Figs/Y_k.png' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.881 ...raphics[width=\columnwidth]{Figs/Y_k.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<figures/yndft.png, id=362, 462.528pt x 346.896pt>
+File: figures/yndft.png Graphic file (type png)
+<use figures/yndft.png>
+Package pdftex.def Info: figures/yndft.png  used on input line 862.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+[8 </home/naresh/signal processing/figures/ynconv_toeplitz.png> <./figures/yndf
+t.png>]
+<figures/Y_k.png, id=389, 462.528pt x 346.896pt>
+File: figures/Y_k.png Graphic file (type png)
+<use figures/Y_k.png>
+Package pdftex.def Info: figures/Y_k.png  used on input line 881.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
 
 LaTeX Warning: Command \j invalid in math mode on input line 887.
 
+<figures/yndft_dif.png, id=391, 462.528pt x 346.896pt>
+File: figures/yndft_dif.png Graphic file (type png)
+<use figures/yndft_dif.png>
+Package pdftex.def Info: figures/yndft_dif.png  used on input line 900.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-LaTeX Warning: Reference `yndft_dif' on page 8 undefined on input line 889.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8 </home/naresh/signal processing/figures/ynconv_toeplitz.png>]
-
-LaTeX Warning: File `Figs/yndft_dif.png' not found on input line 900.
-
-
-! Package pdftex.def Error: File `Figs/yndft_dif.png' not found: using draft se
-tting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.900 ...s[width=\columnwidth]{Figs/yndft_dif.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `yn_ifft' on page 9 undefined on input line 907.
-
-
-LaTeX Warning: File `Figs/yn_ifft.png' not found on input line 917.
-
-
-! Package pdftex.def Error: File `Figs/yn_ifft.png' not found: using draft sett
-ing.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.917 ...ics[width=\columnwidth]{Figs/yn_ifft.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[9] [10
-
-] (./main.aux)
+<figures/yn_ifft.png, id=393, 462.528pt x 346.896pt>
+File: figures/yn_ifft.png Graphic file (type png)
+<use figures/yn_ifft.png>
+Package pdftex.def Info: figures/yn_ifft.png  used on input line 917.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+[9 <./figures/Y_k.png> <./figures/yndft_dif.png> <./figures/yn_ifft.png>]
+(./main.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: C40883B334A679AF7463FAC5A61DDBA7;632
-(rerunfilecheck)             After:  34C48DA47302F4F2E7C62C40DA8A8E10;690.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 34C48DA47302F4F2E7C62C40DA8A8E10;690.
  ) 
 Here is how much of TeX's memory you used:
- 21090 strings out of 478287
- 382812 string characters out of 5849289
+ 20938 strings out of 478287
+ 379749 string characters out of 5849289
  981929 words of memory out of 5000000
- 38716 multiletter control sequences out of 15000+600000
- 549835 words of font info for 206 fonts, out of 8000000 for 9000
+ 38585 multiletter control sequences out of 15000+600000
+ 549559 words of font info for 205 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 70i,16n,79p,274b,1436s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,16n,79p,274b,2412s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></usr/share/texlive/texmf-dist
@@ -1556,15 +1484,14 @@ nts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/txfonts/txtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
-b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (10 pages, 242229 bytes).
+nts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
+rw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8
+a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (9 pages, 290694 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
- 411 compressed objects within 5 object streams
- 231 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 531 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
+ 230 named destinations out of 1000 (max. 500000)
+ 99 words of extra memory for PDF output out of 10000 (max. 10000000)
 
